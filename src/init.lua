@@ -13,7 +13,8 @@ addSpell(283626) -- Divine Burst - Champion of the Light
 addSpell(282036) -- Fireball - Jadefire Masters
 addSpell(286988) -- Searing Embers - Jadefire Masters
 
-addSpell(286646) -- Gigavolt Charge - High Tinker Mekkatorque
+addSpell(289292) -- Bestial Throw - Grong
+
 addSpell(282182) -- Buster Cannon - High Tinker Mekkatorque
 
 --- Uldir ---
@@ -22,20 +23,59 @@ addSpell(279669) -- Bacterial Outbreak - Mother
 addSpell(279660) -- Endemic Virus - Mother
 addSpell(274262) -- Explosive Corruption - G'huun
 
+--- Reaping ---
+
+addSpell(288693) -- Grave Bolt
+
 --- Atal'Dazar ---
 
 addSpell(250096) -- Wracking Pain - Yazma
+
+-- Trash --
+
+addSpell(253562) -- Wildfire
+addSpell(252923) -- Venom Blast
 
 --- King's Rest ---
 
 addSpell(267618) -- Drain Fluids - Mchimba the Embalmer
 addSpell(267308) -- Lighting Bolt - Zanazal the Wise
 
+-- Trash --
+
+addSpell(270493) -- Spectral Bolt
+addSpell(269973) -- Deathly Chill
+addSpell(270923) -- Shadow Bolt
+
+--- Freehold ---
+
+-- Trash --
+
+addSpell(259092) -- Lightning Bolt
+addSpell(281420) -- Water Bolt
+
+--- Siege of Boralus ---
+
+-- Trash --
+
+addSpell(272588) -- Rotting Wounds
+addSpell(272581) -- Water Spray
+addSpell(257641) -- Molten Slug
+addSpell(257063) -- Brackish Bolt
+
 --- Temple of Sethraliss ---
 
 addSpell(263318) -- Jolt - Aspix
 addSpell(263775) -- Gust - Aspix
 addSpell(268061) -- Chain Lightning - Avatar of Sethraliss
+
+-- Trash --
+
+addSpell(272820) -- Shock
+addSpell(268013) -- Flame Shock
+addSpell(274642) -- Lava Burst
+addSpell(268703) -- Lightning Bolt
+addSpell(272699) -- Venomous Spit
 
 --- Shrine of the Storm ---
 
@@ -44,51 +84,85 @@ addSpell(264560) -- Choking Brine - Aqu'sirr
 addSpell(264144) -- Undertow - Aqu'sirr
 addSpell(268347) -- Void Bolt - Lord Stormsong
 
+-- Trash --
+
+addSpell(267969) -- Water Blast
+addSpell(268233) -- Electrifying Shock
+addSpell(268315) -- Lash
+addSpell(268177) -- Windblast
+addSpell(268273) -- Deep Smash
+addSpell(268317) -- Rip Mind
+addSpell(265001) -- Sea Blast
+addSpell(274703) -- Void Bolt
+
 --- The Motherlode ---
 
 addSpell(259856) -- Chemical Burn - Rixxa Fluxflame
 addSpell(260318) -- Alpha Cannon - Mogul Razdunk
 
+-- Trash --
+
+addSpell(262794) -- Energy Lash
+addSpell(263202) -- Rock Lance
+addSpell(262268) -- Caustic Compound
+addSpell(263262) -- Shale Spit
+
 --- The Underrot ---
 
 addSpell(260879) -- Blood Bolt - Elder Leaxa
 
+-- Trash --
+
+addSpell(265084) -- Blood Bolt
+
 --- Tol Dagor ---
 
 addSpell(257777) -- Crippling Shiv - Jes Howlis
-addSpell(257033) -- Fuselighter - Knight Captain Valyri
+addSpell(257028) -- Fuselighter - Knight Captain Valyri
+
+-- Trash --
+
+addSpell(258150) -- Salt Blast
+addSpell(258869) -- Blaze
 
 --- Waycrest Manor ---
 
-addSpell(260701) -- Bramble Bolt - Sister Briar
-addSpell(260700) -- Ruinous Bolt - Sister Malady
-addSpell(260699) -- Soul Bolt - Sister Solena
+addSpell(260697) -- Bramble Bolt - Sister Briar
+addSpell(260696) -- Ruinous Bolt - Sister Malady
+addSpell(260698) -- Soul Bolt - Sister Solena
 addSpell(268271) -- Wracking Chord - Lord and Lady Waycrest
 addSpell(261438) -- Wasting Strike - Lord and Lady Waycrest
 addSpell(261440) -- Virulent Pathogen - Lord and Lady Waycrest
 addSpell(266225) -- Darkened Lightning - Gorak Tul
 
+-- Trash --
+
+addSpell(273653) -- Shadow Claw
+addSpell(265881) -- Decaying Touch
+addSpell(264153) -- Spit
+addSpell(265760) -- Thorned Barrage
+
 -- Do not touch anything below this line. --
 
 aura_env.castTable = {}
-aura_env.orderCount = 1
+aura_env.sortCount = 1
 
-aura_env.orderCasts = function(tbl)
-    
-    local orderedCasts = {}
-    
-    for k, v in pairs(tbl) do
-        
-        if v ~= nil then
-            table.insert(orderedCasts, {k, v})
+aura_env.spairs = function(t)
+
+    local keys = {}
+    for k in pairs(t) do keys[#keys+1] = k end
+
+    table.sort(keys, function(a,b)
+        return (t[a].endTime == t[b].endTime and t[a].sortCount < t[b].sortCount) or t[a].endTime < t[b].endTime
+    end)
+
+    local i = 0
+    return function()
+        i = i + 1
+        if keys[i] then
+            return keys[i], t[keys[i]]
         end
     end
-    
-    table.sort(orderedCasts, function(a, b)
-            return (a[2].endTime == b[2].endTime) and (a[2].order < b[2].order) or (a[2].endTime < b[2].endTime)
-    end)
-    
-    return orderedCasts
 end
 
 aura_env.getBuffInfo = function(spellID)
@@ -152,4 +226,3 @@ end
 aura_env.strStartsWith = function(str, start)
     return string.sub(str,1,string.len(start)) == start
 end
-
