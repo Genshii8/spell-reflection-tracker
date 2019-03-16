@@ -60,8 +60,8 @@ addSpell(281420) -- Water Bolt
 
 addSpell(272588) -- Rotting Wounds
 addSpell(272581) -- Water Spray
-addSpell(257641) -- Molten Slug
 addSpell(257063) -- Brackish Bolt
+addSpell(272571) -- Choking Waters
 
 --- Temple of Sethraliss ---
 
@@ -94,6 +94,7 @@ addSpell(268273) -- Deep Smash
 addSpell(268317) -- Rip Mind
 addSpell(265001) -- Sea Blast
 addSpell(274703) -- Void Bolt
+addSpell(268214) -- Carve Flesh
 
 --- The Motherlode ---
 
@@ -106,6 +107,7 @@ addSpell(262794) -- Energy Lash
 addSpell(263202) -- Rock Lance
 addSpell(262268) -- Caustic Compound
 addSpell(263262) -- Shale Spit
+addSpell(263628) -- Charged Claw
 
 --- The Underrot ---
 
@@ -140,7 +142,7 @@ addSpell(266225) -- Darkened Lightning - Gorak Tul
 addSpell(273653) -- Shadow Claw
 addSpell(265881) -- Decaying Touch
 addSpell(264153) -- Spit
-addSpell(265760) -- Thorned Barrage
+addSpell(278444) -- Infest
 
 -- Do not touch anything below this line. --
 
