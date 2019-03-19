@@ -183,14 +183,14 @@ end
 
 aura_env.firstClone = {}
 aura_env.spellReflection = aura_env.getBuffInfo(23920)
-aura_env.dontRun = true
+aura_env.shouldRun = false
 
 local goingToReflect = nil
 
 aura_env.colorReflectedSpell = function()
     
     if aura_env.config.colorReflectedSpell and aura_env.spellReflection.isUp
-    and aura_env.spellReflection.expirationTime > aura_env.firstClone.endTime and not aura_env.dontRun then
+    and aura_env.spellReflection.expirationTime > aura_env.firstClone.endTime and aura_env.shouldRun then
         
         local region = WeakAuras.GetRegion(aura_env.id, aura_env.firstClone.key)
         region.bar.fg:SetVertexColor(aura_env.config.reflectedSpellBarColor[1],aura_env.config.reflectedSpellBarColor[2],
@@ -214,7 +214,7 @@ aura_env.highlight = function()
             LCG.PixelGlow_Stop(previousRegion.bar)
         end
         
-        LCG.PixelGlow_Start(region.bar,{1,1,0,1},4,0.25,_,1,_,_,false)
+        LCG.PixelGlow_Start(region.bar,{1,1,0,1},4,0.25,nil,1,nil,nil,false)
         previousHighlightCast = aura_env.highlightCast
     end
     

@@ -23,7 +23,7 @@ function(allstates, e, unit, castID, spellID)
         end
     end
 
-    if e == "UNIT_SPELLCAST_START" and unit then
+    if e == "UNIT_SPELLCAST_START" and unit and castID then
         
         if aura_env.reflectableSpells[spellID] then
             
@@ -48,12 +48,13 @@ function(allstates, e, unit, castID, spellID)
     if e == "UNIT_SPELLCAST_SUCCEEDED" then
         
         if castID == aura_env.firstClone.key then
-            aura_env.dontRun = true
+            aura_env.shouldRun = false
         end
         
         clearCast(castID)
-        
-    elseif e == "UNIT_SPELLCAST_STOP" then
+    end
+    
+    if e == "UNIT_SPELLCAST_STOP" then
         
         clearCast(castID)
         
@@ -84,13 +85,13 @@ function(allstates, e, unit, castID, spellID)
         if subevent == "SPELL_AURA_APPLIED" and selfSpellReflection then
             
             aura_env.spellReflection = aura_env.getBuffInfo(23920)
-            refreshColorReflectedSpell = true
-            aura_env.dontRun = false
+			refreshColorReflectedSpell = true
+            aura_env.shouldRun = true
             
         elseif subevent == "SPELL_AURA_REMOVED" and selfSpellReflection then
             
             aura_env.spellReflection = aura_env.getBuffInfo(23920)
-            aura_env.dontRun = false
+            aura_env.shouldRun = false
         end
     end
     
@@ -157,7 +158,6 @@ function(allstates, e, unit, castID, spellID)
         
         if refreshColorReflectedSpell then
             aura_env.colorReflectedSpell()
-            refreshColorReflectedSpell = false
         end
     else
         aura_env.sortCount = 1
