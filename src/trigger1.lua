@@ -12,6 +12,8 @@ function(allstates, e, unit, castID, spellID)
         
         if aura_env.castTable[localCastID] then
             aura_env.castTable[localCastID] = nil
+        end
+        if allstates[localCastID] then
             allstates[localCastID].show = false
         end
     end
