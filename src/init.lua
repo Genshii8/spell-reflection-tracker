@@ -4,6 +4,12 @@ local addSpell = function(spellID)
     aura_env.reflectableSpells[spellID] = true
 end
 
+--- The Eternal Palace ---
+
+addSpell(296673) -- Chain Lightning - Radiance of Azshara
+
+addSpell(300395) -- Fervent Bolt - The Queen's Court
+
 --- Battle of Dazar'alor ---
 
 addSpell(283572) -- Sacred Blade - Champion of the Light
@@ -22,6 +28,15 @@ addSpell(282182) -- Buster Cannon - High Tinker Mekkatorque
 addSpell(279669) -- Bacterial Outbreak - Mother
 addSpell(279660) -- Endemic Virus - Mother
 addSpell(274262) -- Explosive Corruption - G'huun
+
+--- Mechagon ---
+
+addSpell(298669) -- Taze - Trixie & Naeno
+addSpell(291878) -- Pulse Blast - King Mechagon
+
+-- Trash --
+
+addSpell(293827) -- Giga-Wallop
 
 --- Reaping ---
 
