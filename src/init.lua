@@ -4,6 +4,23 @@ local addSpell = function(spellID)
     aura_env.reflectableSpells[spellID] = true
 end
 
+--- Ny'alotha, the Waking City ---
+
+addSpell(313652) -- Mind-Numbing Nova - The Hivemind
+
+addSpell(317102) -- Evoke Anguish - N'Zoth, the Corruptor
+addSpell(314889) -- Probe Mind - N'Zoth, the Corruptor
+
+-- Trash --
+
+addSpell(311045) -- Void Bolt
+addSpell(314149) -- Void Bolt Volley
+addSpell(314998) -- Shadow Bolt
+addSpell(316620) -- Shadow Bolt Volley
+addSpell(318409) -- Discordant Whispers
+addSpell(314188) -- Mind Flay
+addSpell(306874) -- Chain Lightning
+
 --- The Eternal Palace ---
 
 addSpell(296673) -- Chain Lightning - Radiance of Azshara
@@ -165,14 +182,14 @@ aura_env.castTable = {}
 aura_env.sortCount = 1
 
 aura_env.spairs = function(t)
-
+    
     local keys = {}
     for k in pairs(t) do keys[#keys+1] = k end
-
+    
     table.sort(keys, function(a,b)
-        return (t[a].endTime == t[b].endTime and t[a].sortCount < t[b].sortCount) or t[a].endTime < t[b].endTime
+            return (t[a].endTime == t[b].endTime and t[a].sortCount < t[b].sortCount) or t[a].endTime < t[b].endTime
     end)
-
+    
     local i = 0
     return function()
         i = i + 1

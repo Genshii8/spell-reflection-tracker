@@ -7,7 +7,7 @@ UNIT_SPELLCAST_START,UNIT_SPELLCAST_SUCCEEDED,UNIT_SPELLCAST_STOP,UNIT_SPELLCAST
 function(allstates, e, unit, castID, spellID)
     
     local refreshColorReflectedSpell = false
-
+    
     local clearCast = function(localCastID)
         
         if aura_env.castTable[localCastID] then
@@ -17,14 +17,14 @@ function(allstates, e, unit, castID, spellID)
             allstates[localCastID].show = false
         end
     end
-
+    
     -- only evaluate for nameplate units
     if unit then
         if not aura_env.strStartsWith(unit, "nameplate") then
             unit = nil
         end
     end
-
+    
     if e == "UNIT_SPELLCAST_START" and unit and castID then
         
         if aura_env.reflectableSpells[spellID] then
@@ -40,13 +40,13 @@ function(allstates, e, unit, castID, spellID)
                     endTime = endTime/1000,
                     sortCount = aura_env.sortCount
                 }
-
+                
                 aura_env.sortCount = aura_env.sortCount + 1
                 refreshColorReflectedSpell = true
             end
         end
     end
-
+    
     if e == "UNIT_SPELLCAST_SUCCEEDED" then
         
         if castID == aura_env.firstClone.key then
@@ -72,7 +72,7 @@ function(allstates, e, unit, castID, spellID)
             aura_env.castTable[castID].startTime = startTime/1000
             aura_env.castTable[castID].endTime = endTime/1000
         end
-
+        
         refreshColorReflectedSpell = true
     end
     
@@ -87,7 +87,7 @@ function(allstates, e, unit, castID, spellID)
         if subevent == "SPELL_AURA_APPLIED" and selfSpellReflection then
             
             aura_env.spellReflection = aura_env.getBuffInfo(23920)
-			refreshColorReflectedSpell = true
+            refreshColorReflectedSpell = true
             aura_env.shouldRun = true
             
         elseif subevent == "SPELL_AURA_REMOVED" and selfSpellReflection then
@@ -112,21 +112,21 @@ function(allstates, e, unit, castID, spellID)
             castTableNotEmpty = true
         end
     end
-
+    
     if castTableNotEmpty then
         
         local startTime, duration = GetSpellCooldown(23920)
         local spellReflectionStart = startTime + duration
         local nextReflectableCastFound = false
         local firstCloneSet = false
-
+        
         local i = 0
         for k, v in aura_env.spairs(aura_env.castTable) do
             
             i = i + 1
-
+            
             if i <= aura_env.config.maxBars then
-
+                
                 allstates[k] = {
                     show = true,
                     changed = true,
@@ -138,7 +138,7 @@ function(allstates, e, unit, castID, spellID)
                     index = i,
                     stacks = i
                 }
-
+                
             end
             
             if not nextReflectableCastFound then
@@ -148,7 +148,7 @@ function(allstates, e, unit, castID, spellID)
                 end
                 nextReflectableCastFound = true
             end
-
+            
             if not firstCloneSet then
                 aura_env.firstClone.key = k
                 aura_env.firstClone.endTime = v.endTime
