@@ -1,3 +1,3 @@
-v2.3.0
+# spell-reflection-tracker
 
-https://wago.io/SpellReflectionTracker
+A WeakAura for tracking reflectable spells for Protection Warriors in World of Warcraft.
