@@ -4,179 +4,180 @@ local addSpell = function(spellID)
     aura_env.reflectableSpells[spellID] = true
 end
 
---- Ny'alotha, the Waking City ---
+--- Castle Nathria ---
 
-addSpell(313652) -- Mind-Numbing Nova - The Hivemind
+addSpell(334852) -- Petrifying Howl - Huntsman Altimor
+addSpell(335114) -- Sinseeker - Huntsman Altimor
 
-addSpell(317102) -- Evoke Anguish - N'Zoth, the Corruptor
-addSpell(314889) -- Probe Mind - N'Zoth, the Corruptor
+addSpell(328885) -- Greater Castigation - Sun King's Salvation
 
--- Trash --
+addSpell(331573) -- Unconscionable Guilt - Lady Inerva Darkvein
+addSpell(342321) -- Concentrated Anima - Lady Inerva Darkvein
+addSpell(342320) -- Lightly Concentrated Anima - Lady Inerva Darkvein
 
-addSpell(311045) -- Void Bolt
-addSpell(314149) -- Void Bolt Volley
-addSpell(314998) -- Shadow Bolt
-addSpell(316620) -- Shadow Bolt Volley
-addSpell(318409) -- Discordant Whispers
-addSpell(314188) -- Mind Flay
-addSpell(306874) -- Chain Lightning
+addSpell(330968) -- Throw Food - The Council of Blood
+addSpell(346800) -- Waltz of Blood - The Council of Blood
+addSpell(346654) -- Drain Essence - The Council of Blood
+addSpell(331634) -- Dark Recital - The Council of Blood
 
---- The Eternal Palace ---
+addSpell(326005) -- Indignation - Sire Denathrius
+addSpell(326994) -- Blood Price - Sire Denathrius
+addSpell(326851) -- Blood Price - Sire Denathrius
 
-addSpell(296673) -- Chain Lightning - Radiance of Azshara
+--- De Other Side ---
 
-addSpell(300395) -- Fervent Bolt - The Queen's Court
+addSpell(322736) -- Piercing Barb - Hakkar the Soulflayer
+addSpell(323166) -- Corrupted Blood - Hakkar the Soulflayer
 
---- Battle of Dazar'alor ---
+addSpell(320008) -- Frostbolt - The Manastorms
 
-addSpell(283572) -- Sacred Blade - Champion of the Light
-addSpell(284449) -- Reckoning - Champion of the Light
-addSpell(283626) -- Divine Burst - Champion of the Light
+addSpell(320230) -- Explosive Contrivance - Dealer Xy'exa
+addSpell(323687) -- Arcane Lightning - Dealer Xy'exa
 
-addSpell(282036) -- Fireball - Jadefire Masters
-addSpell(286988) -- Searing Embers - Jadefire Masters
-
-addSpell(289292) -- Bestial Throw - Grong
-
-addSpell(282182) -- Buster Cannon - High Tinker Mekkatorque
-
---- Uldir ---
-
-addSpell(279669) -- Bacterial Outbreak - Mother
-addSpell(279660) -- Endemic Virus - Mother
-addSpell(274262) -- Explosive Corruption - G'huun
-
---- Mechagon ---
-
-addSpell(298669) -- Taze - Trixie & Naeno
-addSpell(291878) -- Pulse Blast - King Mechagon
+addSpell(325258) -- Master of Death - Mueh'zala
+addSpell(327646) -- Soulcrusher - Mueh'zala
 
 -- Trash --
 
-addSpell(293827) -- Giga-Wallop
+addSpell(332705) -- Smite
+addSpell(332707) -- Shadow Word: Pain
+addSpell(332605) -- Hex
+addSpell(334076) -- Shadowcore
+addSpell(332196) -- Discharge
+addSpell(328707) -- Scribe
+addSpell(333641) -- Reaver
+addSpell(332234) -- Essential Oil
+addSpell(333711) -- Decript Bite
+addSpell(323544) -- Blood Nova
 
---- Reaping ---
+--- Halls of Atonement ---
 
-addSpell(288693) -- Grave Bolt
+addSpell(322977) -- Sinlight Visions - Halkias
 
---- Atal'Dazar ---
+addSpell(328322) -- Villainous Bolt - Ecehlon
 
-addSpell(250096) -- Wracking Pain - Yazma
+addSpell(323538) -- Bolt of Power - High Adjucator Aleez
 
--- Trash --
-
-addSpell(253562) -- Wildfire
-addSpell(252923) -- Venom Blast
-
---- King's Rest ---
-
-addSpell(267618) -- Drain Fluids - Mchimba the Embalmer
-addSpell(267308) -- Lighting Bolt - Zanazal the Wise
-
--- Trash --
-
-addSpell(270493) -- Spectral Bolt
-addSpell(269973) -- Deathly Chill
-addSpell(270923) -- Shadow Bolt
-
---- Freehold ---
+addSpell(328791) -- Ritual of Woe - Lord Chamberlain
 
 -- Trash --
 
-addSpell(259092) -- Lightning Bolt
-addSpell(281420) -- Water Bolt
+addSpell(338003) -- Wicked Bolt
+addSpell(325700) -- Collect Sins
+addSpell(326829) -- Wicked Bolt
 
---- Siege of Boralus ---
+--- Mists of Tirna Scithe ---
 
--- Trash --
-
-addSpell(272588) -- Rotting Wounds
-addSpell(272581) -- Water Spray
-addSpell(257063) -- Brackish Bolt
-addSpell(272571) -- Choking Waters
-
---- Temple of Sethraliss ---
-
-addSpell(263318) -- Jolt - Aspix
-addSpell(263775) -- Gust - Aspix
-addSpell(268061) -- Chain Lightning - Avatar of Sethraliss
+addSpell(323057) -- Spirit Bolt - Ingra Maloch
 
 -- Trash --
 
-addSpell(272820) -- Shock
-addSpell(268013) -- Flame Shock
-addSpell(274642) -- Lava Burst
-addSpell(268703) -- Lightning Bolt
-addSpell(272699) -- Venomous Spit
+addSpell(324923) -- Bramble Burst
+addSpell(326319) -- Spirit Bolt
+addSpell(322767) -- Spirit Bolt
+addSpell(322557) -- Soul Split
+addSpell(331718) -- Spear Flurry
+addSpell(325223) -- Anima Injection
+addSpell(325418) -- Volatile Acid
+addSpell(322486) -- Overgrowth
 
---- Shrine of the Storm ---
+--- Plaguefall ---
 
-addSpell(265001) -- Sea Blast - Aqu'sirr
-addSpell(264560) -- Choking Brine - Aqu'sirr
-addSpell(264144) -- Undertow - Aqu'sirr
-addSpell(268347) -- Void Bolt - Lord Stormsong
+addSpell(324527) -- Plaguestomp - Globrog
 
--- Trash --
-
-addSpell(267969) -- Water Blast
-addSpell(268233) -- Electrifying Shock
-addSpell(268315) -- Lash
-addSpell(268177) -- Windblast
-addSpell(268273) -- Deep Smash
-addSpell(268317) -- Rip Mind
-addSpell(265001) -- Sea Blast
-addSpell(274703) -- Void Bolt
-addSpell(268214) -- Carve Flesh
-
---- The Motherlode ---
-
-addSpell(259856) -- Chemical Burn - Rixxa Fluxflame
-addSpell(260318) -- Alpha Cannon - Mogul Razdunk
+addSpell(329110) -- Slime Injection - Doctor Ickus
 
 -- Trash --
 
-addSpell(262794) -- Energy Lash
-addSpell(263202) -- Rock Lance
-addSpell(262268) -- Caustic Compound
-addSpell(263262) -- Shale Spit
-addSpell(263628) -- Charged Claw
+addSpell(328475) -- Enveloping Webbing
+addSpell(327995) -- Doom Shroom
+addSpell(327552) -- Doom Shroom
+addSpell(328002) -- Hurl Spores
+addSpell(328180) -- Gripping Infection
+addSpell(328094) -- Pestilence Bolt
+addSpell(334926) -- Wretched Phlegm
+addSpell(320512) -- Corroded Claws
 
---- The Underrot ---
+--- Sanguine Depths ---
 
-addSpell(260879) -- Blood Bolt - Elder Leaxa
-
--- Trash --
-
-addSpell(265084) -- Blood Bolt
-
---- Tol Dagor ---
-
-addSpell(257777) -- Crippling Shiv - Jes Howlis
-addSpell(257028) -- Fuselighter - Knight Captain Valyri
+addSpell(322554) -- Castigate - Executor Tarvold
 
 -- Trash --
 
-addSpell(258150) -- Salt Blast
-addSpell(258869) -- Blaze
+addSpell(326712) -- Dark Bolt
+addSpell(321249) -- Shadow Claws
+addSpell(326827) -- Dread Bindings
+addSpell(326837) -- Gloom Burst
+addSpell(326952) -- Fiery Cantrip
+addSpell(322169) -- Growing Mistrust
+addSpell(321038) -- Wrack Soul
 
---- Waycrest Manor ---
+--- Spires of Ascension ---
 
-addSpell(260697) -- Bramble Bolt - Sister Briar
-addSpell(260696) -- Ruinous Bolt - Sister Malady
-addSpell(260698) -- Soul Bolt - Sister Solena
-addSpell(268271) -- Wracking Chord - Lord and Lady Waycrest
-addSpell(261438) -- Wasting Strike - Lord and Lady Waycrest
-addSpell(261440) -- Virulent Pathogen - Lord and Lady Waycrest
-addSpell(266225) -- Darkened Lightning - Gorak Tul
+addSpell(324368) -- Attenuated Barrage - Kin-Tara
+
+addSpell(324608) -- Charged Stomp - Oryphrion
+addSpell(334053) -- Purifying Blast - Oryphrion
 
 -- Trash --
 
-addSpell(273653) -- Shadow Claw
-addSpell(265881) -- Decaying Touch
-addSpell(264153) -- Spit
-addSpell(278444) -- Infest
+addSpell(317661) -- Insidious Venom
+addSpell(323804) -- Dark Seeker
+
+--- Necrotic Wake ---
+
+addSpell(320637) -- Fetid Gas - Blightbone
+addSpell(328146) -- Fetid Gas - Blightbone
+
+addSpell(328667) -- Frostbolt Volley - Amarth, the Harvester
+
+addSpell(320788) -- Frozen Binds - Nalthor the Rimebinder
+addSpell(322274) -- Enfeeble - Nalthor the Rimebinder
+
+-- Trash --
+
+addSpell(334748) -- Drain Fluids
+addSpell(320462) -- Necrotic Bolt
+addSpell(320170) -- Necrotic Bolt
+addSpell(320171) -- Necrotic Bolt
+addSpell(333479) -- Spew Disease
+addSpell(323347) -- Clinging Darkness
+
+--- Theater of Pain ---
+
+addSpell(320120) -- Plague Bolt - An Affront of Challengers
+addSpell(320300) -- Necromantic Bolt - An Affront of Challengers
+
+addSpell(319669) -- Spectral Reach - Kul'tharok
+
+addSpell(324079) -- Reaping Scythe - Mordretha, the Endless Empress
+addSpell(324589) -- Death Bolt - Mordretha, the Endless Empress
+addSpell(323608) -- Dark Devastation - Mordretha, the Endless Empress
+
+-- Trash --
+
+addSpell(330784) -- Necrotic Bolt
+addSpell(330703) -- Decaying Filth
+addSpell(333299) -- Curse of Desolation
+addSpell(330875) -- Spirit Frost
+addSpell(330810) -- Bind Soul
+addSpell(332550) -- Soul Touch
 
 -- Do not touch anything below this line. --
+
+local header = "======== |T132361:20|t Spell Reflection Tracker |T132361:20|t ========"
+aura_env.nameplateWarning = function()
+    if C_CVar.GetCVar("nameplateShowEnemies") ~= "1" then
+        print(header)
+        print("\124cFFFF0000Enemy Nameplates are NOT enabled.\124r")
+        print("\124cFFFF0000This WeakAura will not function without Enemy Nameplates enabled.\124r")
+        print(header)
+    end
+end
+if aura_env.config.nameplateWarning then
+    aura_env.nameplateWarning()
+end
+aura_env.nameplateWarningSent = false
 
 aura_env.castTable = {}
 aura_env.sortCount = 1

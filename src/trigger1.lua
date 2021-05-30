@@ -6,6 +6,10 @@ UNIT_SPELLCAST_START,UNIT_SPELLCAST_SUCCEEDED,UNIT_SPELLCAST_STOP,UNIT_SPELLCAST
 
 function(allstates, e, unit, castID, spellID)
     
+    if castID then
+        castID = "SRT"..castID -- make sure GUID is unique
+    end
+    
     local refreshColorReflectedSpell = false
     
     local clearCast = function(localCastID)
