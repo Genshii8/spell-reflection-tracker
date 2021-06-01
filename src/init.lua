@@ -171,6 +171,7 @@ aura_env.nameplateWarning = function()
         print(header)
         print("\124cFFFF0000Enemy Nameplates are NOT enabled.\124r")
         print("\124cFFFF0000This WeakAura will not function without Enemy Nameplates enabled.\124r")
+        print("This warning can be disabled in Custom Options.")
         print(header)
     end
 end
