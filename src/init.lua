@@ -4,6 +4,23 @@ local addSpell = function(spellID)
     aura_env.reflectableSpells[spellID] = true
 end
 
+--- Sepulcher of the First Ones ---
+
+addSpell(361001) -- Wave of Disintegration - Vigilant Guardian
+addSpell(360162) -- Split Resolution - Vigilant Guardian
+
+addSpell(359778) -- Ephemera Dust - Skolex, the Insatiable Ravener
+
+addSpell(364030) -- Debilitating Ray - Artificer Xy'mox
+
+addSpell(363607) -- Domination Bolt - Dausegne, the Fallen Oracle
+addSpell(361513) -- Obliteration Arc - Dausegne, the Fallen Oracle
+addSpell(360959) -- Staggering Barrage - Dausegne, the Fallen Oracle
+
+addSpell(364865) -- Sinful Projection - Prototype Pantheon
+
+addSpell(360006) -- Cloud of Carrion - Lords of Dread
+
 --- Castle Nathria ---
 
 addSpell(334852) -- Petrifying Howl - Huntsman Altimor
